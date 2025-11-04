@@ -191,11 +191,7 @@ export const Home = (): JSX.Element => {
   return (
     <div className="bg-white overflow-hidden w-full min-w-[1440px] relative">
       <header className="relative w-full h-[819px]">
-        <img
-          className="absolute top-0 left-0 w-full h-[816px] object-cover"
-          alt="Screenshot"
-          src="/screenshot-2025-10-31-164808-1-3.png"
-        />
+        
         <div className="absolute top-[3px] left-0 w-full h-[816px] bg-[linear-gradient(121deg,rgba(255,255,255,0.87)_52%,rgba(153,153,153,0.22)_100%)]" />
 
         <div className="absolute top-12 left-[72px] [font-family:'Boldonse',Helvetica] font-normal text-[#070d59] text-xs tracking-[3.60px] leading-[normal]">
@@ -263,7 +259,7 @@ export const Home = (): JSX.Element => {
         />
       </section>
 
-      <section className="relative w-full min-h-[816px] bg-[url(/screenshot-2025-10-31-164808-1-3.png)] bg-cover bg-[50%_50%]">
+      <section className="relative w-full min-h-[816px]  bg-cover bg-[50%_50%]">
         <div className="w-full min-h-[816px] bg-[#ffffffde] py-16">
           <div className="relative max-w-[1440px] mx-auto px-[65px]">
             <div className="flex flex-col gap-8">
@@ -339,7 +335,7 @@ export const Home = (): JSX.Element => {
         </p>
       </section>
 
-      <section className="relative w-full min-h-[816px] bg-[url(/screenshot-2025-10-31-164808-1-3.png)] bg-cover bg-[50%_50%]">
+      <section className="relative w-full min-h-[816px] bg-cover bg-[50%_50%]">
         <div className="w-full min-h-[816px] bg-[#ffffffde] py-16">
           <div className="max-w-[1142px] mx-auto px-8">
             <p className="[font-family:'Raleway',Helvetica] font-medium text-[32px] text-center tracking-[1.92px] leading-[33.7px]">
@@ -376,7 +372,7 @@ export const Home = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="relative w-full min-h-[816px] bg-[url(/screenshot-2025-10-31-164808-1-3.png)] bg-cover bg-[50%_50%]">
+      <section className="relative w-full min-h-[816px]  bg-cover bg-[50%_50%]">
         <div className="w-full min-h-[816px] bg-[#ffffffde] py-16">
           <div className="max-w-[1440px] mx-auto px-8">
             <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-black text-[49px] text-center tracking-[0] leading-[normal] mb-16">
@@ -406,11 +402,7 @@ export const Home = (): JSX.Element => {
       </section>
 
       <section className="relative w-full h-[2205px]">
-        <img
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          alt="Background"
-          src="/group-6.png"
-        />
+        
         <div className="relative z-10">
           <h2 className="pt-[67px] [font-family:'Boldonse',Helvetica] font-normal text-[#ffffffde] text-[49px] text-center tracking-[0] leading-[normal] mb-[159px]">
             PROFESSIONAL EXPERIENCE
