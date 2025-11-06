@@ -13,6 +13,7 @@ import "swiper/css/effect-coverflow";
 // @ts-ignore
 import "swiper/css/pagination";
 import { Pagination, EffectCoverflow,Autoplay } from 'swiper/modules';
+import ScrollFloat from '../../components/ScrollFloat';
 import './styles.css';
 
 const navigationItems = [
@@ -408,9 +409,17 @@ export const Home = (): JSX.Element => {
           <div className="relative max-w-[1440px] mx-auto px-[65px]">
             <div className="flex flex-row gap-8">
               <div className="mt-[100px] ">
-                <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-5xl tracking-[0] leading-[normal] mb-2.5">
+                <ScrollFloat
+                  animationDuration={1}
+                  ease='back.inOut(2)'
+                  scrollStart='center bottom+=50%'
+                  scrollEnd='bottom bottom-=40%'
+                  stagger={0.03}
+                  containerClassName="mb-2.5"
+                  textClassName="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-5xl tracking-[0] leading-[normal]"
+                >
                   ABOUT ME
-                </h2>
+                </ScrollFloat>
                 <p className="w-[343px] [font-family:'Raleway',Helvetica] font-normal text-[#00032d] text-[15px] tracking-[0] leading-[normal]">
                   With A Foundation In Civil Engineering And A Passion For
                   Design, I&#39;ve Evolved Into An Operations Specialist Who
@@ -438,9 +447,7 @@ export const Home = (): JSX.Element => {
                     <h3 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-xl tracking-[0] leading-[normal] mb-[19px]">
                       CAREER HIGHLIGHTS
                     </h3>
-                    <p className="[font-family:'Raleway',Helvetica] font-normal text-white text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
-                      What Our Client Say About Us
-                    </p>
+                  
                     {careerHighlights.map((highlight, index) => (
                       <div key={index} className="flex gap-[15px] mb-3">
                         <img
@@ -508,9 +515,17 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
       <section className="relative w-full min-h-[816px]  bg-cover bg-[50%_50%]">
         <div className="w-full min-h-[816px] bg-[#ffffffde] py-16">
           <div className="max-w-[1440px] mx-auto px-8">
-            <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] ">
+            <ScrollFloat
+              animationDuration={1}
+              ease='back.inOut(2)'
+              scrollStart='center bottom+=50%'
+              scrollEnd='bottom bottom-=40%'
+              stagger={0.03}
+              containerClassName="text-center"
+              textClassName="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] tracking-[0] leading-[normal]"
+            >
               EDUCATION &amp; CERTIFICATIONS
-            </h2>
+            </ScrollFloat>
             <p className="[font-family:'Raleway',Helvetica] font-normal text-black text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
             What Our Client Say About Us
           </p>
@@ -539,9 +554,17 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
 
       <section className="relative w-full bg-[#ffffffde] ">
         <div className="relative z-10">
-          <h2 className="pt-[67px] [font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] ">
+          <ScrollFloat
+            animationDuration={1}
+            ease='back.inOut(2)'
+            scrollStart='center bottom+=50%'
+            scrollEnd='bottom bottom-=40%'
+            stagger={0.03}
+            containerClassName="pt-[67px] text-center"
+            textClassName="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] tracking-[0] leading-[normal]"
+          >
             PROFESSIONAL EXPERIENCE
-          </h2>
+          </ScrollFloat>
           <p className="[font-family:'Raleway',Helvetica] font-normal text-black text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
             What Our Client Say About Us
           </p>
@@ -571,9 +594,17 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
       </section>
 
       <section className="relative w-full py-16 bg-[#00032dc2] pb-[100px]">
-        <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-white text-[49px] text-center tracking-[0] leading-[normal] ">
+        <ScrollFloat
+          animationDuration={1}
+          ease='back.inOut(2)'
+          scrollStart='center bottom+=50%'
+          scrollEnd='bottom bottom-=40%'
+          stagger={0.03}
+          containerClassName="text-center"
+          textClassName="[font-family:'Boldonse',Helvetica] font-normal text-white text-[49px] tracking-[0] leading-[normal]"
+        >
           CORE STRENGTHS
-        </h2>
+        </ScrollFloat>
         <p className="[font-family:'Raleway',Helvetica] font-normal text-white text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
             What Our Client Say About Us
           </p>
@@ -622,9 +653,17 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
 
       <section id="showcase" className="relative w-full min-h-[700px] bg-[#ffffffde] py-16">
         <div className="relative z-10 pt-[77px]">
-          <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal]">
+          <ScrollFloat
+            animationDuration={1}
+            ease='back.inOut(2)'
+            scrollStart='center bottom+=50%'
+            scrollEnd='bottom bottom-=40%'
+            stagger={0.03}
+            containerClassName="text-center"
+            textClassName="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] tracking-[0] leading-[normal]"
+          >
             SHOWCASE
-          </h2>
+          </ScrollFloat>
           <p className="[font-family:'Raleway',Helvetica] font-normal text-black text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
             What Our Client Say About Us
           </p>
@@ -660,9 +699,17 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
         
 
         <div className="relative z-10 pt-[77px]">
-          <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-white text-[49px] text-center tracking-[0] leading-[normal] mb-4">
+          <ScrollFloat
+            animationDuration={1}
+            ease='back.inOut(2)'
+            scrollStart='center bottom+=50%'
+            scrollEnd='bottom bottom-=40%'
+            stagger={0.03}
+            containerClassName="text-center mb-4"
+            textClassName="[font-family:'Boldonse',Helvetica] font-normal text-white text-[49px] tracking-[0] leading-[normal]"
+          >
             TESTIMONIALS
-          </h2>
+          </ScrollFloat>
           <p className="[font-family:'Raleway',Helvetica] font-normal text-white text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
             What Our Client Say About Us
           </p>
@@ -707,9 +754,17 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
       
       <section id="contact" className="relative w-full bg-[#ffffffde] py-16">
         <div className="relative z-10 max-w-[1440px] mx-auto px-8">
-          <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] mb-4">
+          <ScrollFloat
+            animationDuration={1}
+            ease='back.inOut(2)'
+            scrollStart='center bottom+=50%'
+            scrollEnd='bottom bottom-=40%'
+            stagger={0.03}
+            containerClassName="text-center mb-4"
+            textClassName="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] tracking-[0] leading-[normal]"
+          >
             CONTACT ME
-          </h2>
+          </ScrollFloat>
           <p className="[font-family:'Raleway',Helvetica] font-normal text-[#00032d] text-xl text-center tracking-[1.5px] leading-[normal] mb-12">
             I’d love to hear from you. Reach out via the form or the channels below.
           </p>
