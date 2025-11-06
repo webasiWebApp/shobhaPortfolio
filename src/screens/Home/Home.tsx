@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 // @ts-ignore
 import "swiper/css/pagination";
-import { Pagination, EffectCoverflow } from 'swiper/modules';
+import { Pagination, EffectCoverflow,Autoplay } from 'swiper/modules';
 import './styles.css';
 
 const navigationItems = [
@@ -438,6 +438,9 @@ export const Home = (): JSX.Element => {
                     <h3 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-xl tracking-[0] leading-[normal] mb-[19px]">
                       CAREER HIGHLIGHTS
                     </h3>
+                    <p className="[font-family:'Raleway',Helvetica] font-normal text-white text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
+                      What Our Client Say About Us
+                    </p>
                     {careerHighlights.map((highlight, index) => (
                       <div key={index} className="flex gap-[15px] mb-3">
                         <img
@@ -505,9 +508,12 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
       <section className="relative w-full min-h-[816px]  bg-cover bg-[50%_50%]">
         <div className="w-full min-h-[816px] bg-[#ffffffde] py-16">
           <div className="max-w-[1440px] mx-auto px-8">
-            <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] mb-16">
+            <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] ">
               EDUCATION &amp; CERTIFICATIONS
             </h2>
+            <p className="[font-family:'Raleway',Helvetica] font-normal text-black text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
+            What Our Client Say About Us
+          </p>
             <div className="grid grid-cols-2 gap-x-[50px] gap-y-[31px] max-w-[1052px] mx-auto">
               {educationCertifications.map((cert, index) => (
                 <Card
@@ -533,9 +539,12 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
 
       <section className="relative w-full bg-[#ffffffde] ">
         <div className="relative z-10">
-          <h2 className="pt-[67px] [font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] mb-16">
+          <h2 className="pt-[67px] [font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] ">
             PROFESSIONAL EXPERIENCE
           </h2>
+          <p className="[font-family:'Raleway',Helvetica] font-normal text-black text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
+            What Our Client Say About Us
+          </p>
 
           <div className="max-w-[1100px] mx-auto px-6 pb-16">
             <VerticalTimeline  lineColor="#EE6F57">
@@ -562,9 +571,12 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
       </section>
 
       <section className="relative w-full py-16 bg-[#00032dc2] pb-[100px]">
-        <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-white text-[49px] text-center tracking-[0] leading-[normal] mb-16">
+        <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-white text-[49px] text-center tracking-[0] leading-[normal] ">
           CORE STRENGTHS
         </h2>
+        <p className="[font-family:'Raleway',Helvetica] font-normal text-white text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
+            What Our Client Say About Us
+          </p>
 
         <div className="max-w-[1360px] mx-auto px-10">
       
@@ -610,9 +622,12 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
 
       <section id="showcase" className="relative w-full min-h-[700px] bg-[#ffffffde] py-16">
         <div className="relative z-10 pt-[77px]">
-          <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] mb-16">
+          <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal]">
             SHOWCASE
           </h2>
+          <p className="[font-family:'Raleway',Helvetica] font-normal text-black text-xl text-center tracking-[3.40px] leading-[normal] mb-16">
+            What Our Client Say About Us
+          </p>
           
           <div className="px-8 pb-16">
             <Swiper
@@ -628,7 +643,7 @@ Dynamic and results-driven Real Estate and Construction professional with over 2
                 slideShadows: true,
               }}
               pagination={true}
-              modules={[EffectCoverflow, Pagination]}
+              modules={[EffectCoverflow,Pagination,Autoplay]}
               className="mySwiper"
             >
               {showcaseImages.map((image, index) => (
