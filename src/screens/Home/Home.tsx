@@ -1,4 +1,5 @@
 import { StarIcon } from "lucide-react";
+import ScrollReveal from '../../components/ScrollReveal';
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { useEffect, useRef } from "react";
@@ -7,11 +8,17 @@ import { Card, CardContent } from "../../components/ui/card";
 import { Separator } from "../../components/ui/separator";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Pagination } from 'swiper/modules';
+// @ts-ignore
+import "swiper/css/effect-coverflow";
+// @ts-ignore
+import "swiper/css/pagination";
+import { Pagination, EffectCoverflow } from 'swiper/modules';
+import './styles.css';
 
 const navigationItems = [
   { label: "ABOUT", href: "#about" },
   { label: "PORTFOLIO", href: "#portfolio" },
+  { label: "SHOWCASE", href: "#showcase" },
   { label: "RESUME", href: "#resume" },
   { label: "CONTACT", href: "#contact" },
 ];
@@ -224,6 +231,14 @@ const professionalExperience = [
   },
 ];
 
+const showcaseImages = [
+  "/sc1.webp",
+  "/sc2.webp",
+  "/sc3.webp",
+  "/sc4.webp",
+  
+];
+
 // Removed legacy pagination dots in favor of Swiper
 
 export const Home = (): JSX.Element => {
@@ -388,11 +403,11 @@ export const Home = (): JSX.Element => {
         />
       </section>
 
-      <section className="relative w-full min-h-[816px]  bg-cover bg-[50%_50%]">
-        <div className="w-full min-h-[816px] bg-[#ffffffde] py-16">
+      <section className="relative w-full min-h-[816px]  bg-[#ffffffde] pb-[50px]">
+        <div className="w-full min-h-[816px]  py-16">
           <div className="relative max-w-[1440px] mx-auto px-[65px]">
             <div className="flex flex-row gap-8">
-              <div className="mt-[100px]">
+              <div className="mt-[100px] ">
                 <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-5xl tracking-[0] leading-[normal] mb-2.5">
                   ABOUT ME
                 </h2>
@@ -401,6 +416,10 @@ export const Home = (): JSX.Element => {
                   Design, I&#39;ve Evolved Into An Operations Specialist Who
                   Thrives On Transforming Complex Challenges Into Streamlined,
                   Efficient Solutions.
+                </p>
+
+                <p className="w-[343px] [font-family:'Raleway',Helvetica] font-normal text-[#00032d] text-[15px] tracking-[0] leading-[normal] mt-[100px]">
+                A visionary force in real estate development, Shobha N.V. blends technical rigor, entrepreneurial flair and decades-long expertise to shape impactful urban projects across India. From technical due diligence and feasibility studies to development management and procurement, Shobha delivers economical, sustainable design solutions.
                 </p>
               </div>
 
@@ -458,45 +477,27 @@ export const Home = (): JSX.Element => {
       </section>
 
       <section className="relative w-full h-[105px] bg-[#00032d] flex items-center justify-center overflow-hidden">
-        <p className="[font-family:'Raleway',Helvetica] font-medium text-white text-[32px] text-center tracking-[1.92px] leading-[33.7px] whitespace-nowrap">
-          Founder &amp; Ceo | Real Estate Development ✦ Design &amp; Project
-          Management ✦ Consulting &amp; Entrepreneurship
-        </p>
+        <marquee behavior="scroll" direction="left" scrollamount="6" className="w-full">
+          <span className="[font-family:'Raleway',Helvetica] font-medium text-white text-[32px] tracking-[1.92px] leading-[33.7px] whitespace-nowrap">
+            Founder &amp; Ceo ✦ Real Estate Development ✦ Design &amp; Project Management ✦ Consulting &amp; Entrepreneurship
+          </span>
+        </marquee>
       </section>
 
       <section className="relative w-full min-h-[506px] bg-cover bg-[50%_50%]">
         <div className="w-full min-h-[506px] bg-[#ffffffde] py-16">
           <div className="max-w-[1142px] h-full mt-[100px] mx-auto px-8 flex flex-col items-center justify-center">
-            <p className="[font-family:'Raleway',Helvetica] font-medium text-[32px] text-center tracking-[1.92px] leading-[33.7px] ">
-              <span className="text-[#000000c9] tracking-[0.61px]">
-                Dynamic And Results-driven Real Estate And Construction
-                Professional With Over{" "}
-              </span>
-              <span className="text-[#ee6f57] tracking-[0.61px]">25 Years</span>
-              <span className="text-[#000000c9] tracking-[0.61px]">
-                {" "}
-                Of Leadership Experience In End-to-end Project Lifecycle
-                Management, From Conceptual Design To Execution Across
-                Residential, Commercial, It, And Hospitality Sectors. Proven
-                Expertise In{" "}
-              </span>
-              <span className="text-[#ee6f57] tracking-[0.61px]">
-                Strategic Planning
-              </span>
-              <span className="text-[#000000c9] tracking-[0.61px]">
-                , Feasibility Studies, Technical Due Diligence, And Development
-                Management For Large-scale, Sustainable Projects. Recognized For
-                Establishing And Leading{" "}
-              </span>
-              <span className="text-[#ee6f57] tracking-[0.61px]">
-                High-performing
-              </span>
-              <span className="text-[#000000c9] tracking-[0.61px]">
-                {" "}
-                Teams, Implementing Operational Excellence, And Driving
-                Organizational Growth Through Innovation And Integrity.
-              </span>
-            </p>
+
+          <ScrollReveal
+              baseOpacity={0}
+              enableBlur={true}
+              baseRotation={5}
+              blurStrength={10}
+            >
+
+Dynamic and results-driven Real Estate and Construction professional with over 25 years of leadership experience in end-to-end project lifecycle management, from conceptual design to execution across residential, commercial, IT, and hospitality sectors. Proven expertise in strategic planning, feasibility studies, technical due diligence, and development management for large-scale, sustainable projects. Recognized for establishing and leading high-performing teams, implementing operational excellence, and driving organizational growth through innovation and integrity.
+
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -560,7 +561,7 @@ export const Home = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="relative w-full py-16 bg-[#00032dc2]">
+      <section className="relative w-full py-16 bg-[#00032dc2] pb-[100px]">
         <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-white text-[49px] text-center tracking-[0] leading-[normal] mb-16">
           CORE STRENGTHS
         </h2>
@@ -604,6 +605,39 @@ export const Home = (): JSX.Element => {
         </div>
 
          
+        </div>
+      </section>
+
+      <section id="showcase" className="relative w-full min-h-[700px] bg-[#ffffffde] py-16">
+        <div className="relative z-10 pt-[77px]">
+          <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] mb-16">
+            SHOWCASE
+          </h2>
+          
+          <div className="px-8 pb-16">
+            <Swiper
+              effect={'coverflow'}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={'auto'}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              pagination={true}
+              modules={[EffectCoverflow, Pagination]}
+              className="mySwiper"
+            >
+              {showcaseImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img src={image} alt={`Showcase ${index + 1}`} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </section>
 
@@ -655,6 +689,99 @@ export const Home = (): JSX.Element => {
           </div>
         </div>
       </section>
+      
+      <section id="contact" className="relative w-full bg-[#ffffffde] py-16">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-8">
+          <h2 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-[49px] text-center tracking-[0] leading-[normal] mb-4">
+            CONTACT ME
+          </h2>
+          <p className="[font-family:'Raleway',Helvetica] font-normal text-[#00032d] text-xl text-center tracking-[1.5px] leading-[normal] mb-12">
+            I’d love to hear from you. Reach out via the form or the channels below.
+          </p>
+
+          <div className="grid grid-cols-2 gap-10 items-start">
+            <div className="bg-white rounded-[5px] shadow-[0px_0px_4px_-1px_#00000061] p-8">
+              <h3 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-2xl mb-6">Direct Contacts</h3>
+              <div className="space-y-5">
+                <div>
+                  <p className="[font-family:'Raleway',Helvetica] font-bold text-[#00032d] text-base mb-1">Emails</p>
+                  <div className="flex flex-col gap-1">
+                    <a className="text-[#ee6f57] hover:underline" href="mailto:shobha@example.com">shobha@example.com</a>
+                    <a className="text-[#ee6f57] hover:underline" href="mailto:contact@shobhanv.com">contact@shobhanv.com</a>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="[font-family:'Raleway',Helvetica] font-bold text-[#00032d] text-base mb-1">Phone</p>
+                  <div className="flex flex-col gap-1">
+                    <a className="text-[#ee6f57] hover:underline" href="tel:+911234567890">+91 12345 67890</a>
+                    <a className="text-[#ee6f57] hover:underline" href="tel:+919876543210">+91 98765 43210</a>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="[font-family:'Raleway',Helvetica] font-bold text-[#00032d] text-base mb-1">Social & Web</p>
+                  <div className="flex flex-col gap-1">
+                    <a className="text-[#ee6f57] hover:underline" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a className="text-[#ee6f57] hover:underline" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a className="text-[#ee6f57] hover:underline" href="https://www.shobhanv.com" target="_blank" rel="noopener noreferrer">Website</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full h-full bg-white rounded-[5px] shadow-[0px_0px_4px_-1px_#00000061] p-4">
+              <div className="w-full h-full min-h-[480px]">
+                <iframe
+                  width="640px"
+                  height="480px"
+                  src="https://forms.office.com/r/073X776QTy?embed=true"
+                  frameBorder="0"
+                  marginWidth={0}
+                  marginHeight={0}
+                  style={{ border: 'none', maxWidth: '100%', maxHeight: '100vh' }}
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="relative w-full bg-[#00032d] py-10">
+        <div className="max-w-[1440px] mx-auto px-8">
+          <nav className="flex flex-wrap items-center justify-center gap-8 mb-6">
+            {navigationItems.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                className="[font-family:'Raleway',Helvetica] font-normal text-white text-[15px] tracking-[2px] hover:text-[#ee6f57] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="h-px bg-white/20 mb-6" />
+
+          <div className="text-center [font-family:'Raleway',Helvetica] text-white text-sm opacity-90">
+            <p className="mb-1">© {new Date().getFullYear()} All rights reserved.</p>
+            <p>
+              Design by <span className="font-semibold"> <a
+                href="https://webasi.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#ee6f57] hover:underline"
+              >
+                WEBASI
+              </a></span> 
+             
+            
+            </p>
+          </div>
+        </div>
+      </footer>
+
       </div>
     </div>
   );
