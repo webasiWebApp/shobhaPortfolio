@@ -1,8 +1,8 @@
-import { StarIcon } from "lucide-react";
+import { StarIcon, Menu, X } from "lucide-react";
 import ScrollReveal from '../../components/ScrollReveal';
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Separator } from "../../components/ui/separator";
@@ -31,7 +31,7 @@ const featureCards = [
       "Solid Foundation In Structural Analysis, Infrastructure Design, And Construction Management With A Focus On Sustainable Solutions.",
   },
   {
-    title: "CIVIL ENGINEERING",
+    title: "Design Excellence",
     description:
       "Solid Foundation In Structural Analysis, Infrastructure Design, And Construction Management With A Focus On Sustainable Solutions.",
   },
@@ -245,6 +245,7 @@ const showcaseImages = [
 export const Home = (): JSX.Element => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const scrollTimeoutRef = useRef<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -312,7 +313,7 @@ export const Home = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="bg-white overflow-hidden w-full min-w-[1440px] relative">
+    <div className="bg-white overflow-hidden w-full relative">
       {/* Fixed Background Video */}
       <video
         ref={videoRef}
@@ -343,7 +344,7 @@ export const Home = (): JSX.Element => {
           SHOBHA N.V.
         </div>
 
-        <nav className="absolute top-[49px] left-[862px] flex gap-12">
+        <nav className="absolute top-[49px] left-[862px] hidden md:flex gap-12">
           {navigationItems.map((item, index) => (
             <a
               key={index}
@@ -354,6 +355,18 @@ export const Home = (): JSX.Element => {
             </a>
           ))}
         </nav>
+
+        {/* Mobile top bar */}
+        <div className="md:hidden absolute top-8 left-0 w-full px-6 flex items-center justify-between">
+          <div className="[font-family:'Boldonse',Helvetica] font-normal text-[#070d59] text-sm tracking-[3.60px]">SHOBHA N.V.</div>
+          <button
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setIsMobileMenuOpen(v => !v)}
+            className="w-10 h-10 inline-flex items-center justify-center rounded-md bg-white/80 backdrop-blur border border-black/10 text-[#00032d]"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
 
         <h1 className="absolute top-[269px] left-[72px] [font-family:'Boldonse',Helvetica] font-normal text-8xl tracking-[0] leading-[normal]">
           <span className="text-[#00032d]">SHOBHA N</span>
@@ -379,6 +392,40 @@ export const Home = (): JSX.Element => {
             Get In Touch
           </Button>
         </div>
+        {/* Mobile menu overlay */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden fixed inset-0 z-50">
+            <div
+              className="absolute inset-0 bg-black/40"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <div className="absolute right-0 top-0 h-full w-3/4 max-w-[320px] bg-white shadow-xl p-6 flex flex-col gap-6">
+              <div className="flex items-center justify-between">
+                <span className="[font-family:'Boldonse',Helvetica] text-[#00032d] tracking-[2px]">MENU</span>
+                <button
+                  aria-label="Close menu"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-9 h-9 inline-flex items-center justify-center rounded-md border border-black/10"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <nav className="flex flex-col gap-4">
+                {navigationItems.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="[font-family:'Raleway',Helvetica] text-[#00032d] text-base tracking-[1.5px] hover:text-[#ee6f57]"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </div>
+        )}
+
       </header>
 
       <section className="relative w-full h-[349px] bg-[#00032d]">
