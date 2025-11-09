@@ -15,7 +15,6 @@ import './styles.css';
 
 const navigationItems = [
   { label: "ABOUT", href: "#about" },
-  { label: "PORTFOLIO", href: "#portfolio" },
   { label: "SHOWCASE", href: "#showcase" },
   { label: "RESUME", href: "#resume" },
   { label: "CONTACT", href: "#contact" },
@@ -55,121 +54,102 @@ const coreCompetencies = [
 
 const educationCertifications = [
   {
-    title: "B.E. (CIVIL), M.S. – FIRST CLASS WITH DISTINCTION (1998)",
+    title: "B.E. (CIVIL), M.S. – First Class with Distinction (1998)",
     institution: "RAMAIAH COLLEGE, BANGALORE",
   },
   {
-    title: "EXECUTIVE MBA (BUSINESS ADMINISTRATION)",
+    title: "Executive MBA (Business Administration)",
     institution:
       "INTERNATIONAL SCHOOL OF BUSINESS MANAGEMENT & ADMINISTRATION (ISBM)",
   },
   {
-    title: "FELLOW & APPROVED LIFETIME MEMBEROW",
+    title: "Fellow & Approved Lifetime Member",
     institution: "INSTITUTION OF VALUERS (IMMOVABLE PROPERTY)",
   },
   {
-    title: "QUALIFIED AUDITOR",
+    title: "Qualified Auditor ",
     institution: "ISO 9001:2008 QUALITY MANAGEMENT SYSTEM",
   },
   {
-    title: "ADVANCED TRAINING",
+    title: "Advanced Training ",
     institution: "GREEN BUILDING RATING SYSTEM (CII & IGBC)",
   },
-  {
-    title: "TECHNICAL SKILLS: AUTOCAD, STAAD-PRO, PRIMAVERA, CAMP-EX",
-    institution: "",
-  },
+  
 ];
 
 const coreStrengths = [
   {
     id: 1,
     title: "Strategic Vision & Leadership",
-    icon: "/targeting-1.png",
+    icon: "/cs1.png",
   },
   {
     id: 2,
     title: "Project & Design Management",
-    icon: "/team-leader-1.png",
+    icon: "/cs2.png",
   },
   {
     id: 3,
     title: "Technical Due Diligence & Feasibility Studies",
-    icon: "/implementation-1.png",
+    icon: "/cs3.png",
   },
   {
     id: 4,
     title: "Cross-functional Team Leadership",
-    icon: "/leadership-1.png",
+    icon: "/cs4.png",
   },
   {
     id: 5,
     title: "Business Development & Client Relations",
-    icon: "/team-leader-1.png",
+    icon: "/cs5.png",
   },
   {
     id: 6,
     title: "Sustainable Design Solutions",
-    icon: "/implementation-1.png",
+    icon: "/cs6.png",
   },
   {
     id: 7,
-    title: "Innovation & Risk Management",
-    icon: "/risk-management-1.png",
+    title: "",
+    icon: null,
   },
   {
     id: 8,
     title: "Innovation & Risk Management",
-    icon: "/risk-management-1.png",
+    icon: "/cs7.png",
   },
   {
     id: 9,
-    title: "Innovation & Risk Management",
-    icon: "/risk-management-1.png",
+    title: "",
+    icon: null,
   },
 ];
 
 const testimonials = [
   {
-    name: "JOHN JAPUR",
-    text: "In Promotion And Advertising, A Testimonial Or Show Consists Of A Person's Written Or Spoken Statement Extolling The Virtue Of A Product.",
+    name: "Vivek Uthaiah ",
+    position:"Partner, Studio30 Architects and Planners",
+    text: "I have been professionally associated with Shobha N V over two decades in a wide range of projects. She brings innovative Real estate trends, Project adaptive processess which are grounded and sustainable. These aspects are beneficial for all stakeholder of our projects.",
     rating: 5,
   },
   {
-    name: "JOHN JAPUR",
-    text: "In Promotion And Advertising, A Testimonial Or Show Consists Of A Person's Written Or Spoken Statement Extolling The Virtue Of A Product.",
+    name: "BO Prasanna Kumar",
+    position:"Jt. Managing Director, DesignTree Service Consultants Pvt Ltd",
+    text: "Shobha consistently demonstrates professionalism, attention to detail, and a remarkable ability to manage complex projects. Her friendly demeanour and excellent communication skills make her a joy to work with. Knowledge on MEPF systems & standards is exceptional, focus on sustainable design is an added advantage. Process driven approach towards coordination with all stakeholders. Rare combination of practical and design know how with focus on quality is commendable. Her exceptional project coordination skills have been invaluable to success of project.",
     rating: 5,
   },
   {
-    name: "JOHN JAPUR",
-    text: "In Promotion And Advertising, A Testimonial Or Show Consists Of A Person's Written Or Spoken Statement Extolling The Virtue Of A Product.",
+    name: "Manjunath Tv",
+    position:"Chief Executive Officer at BSCPL Infrastructure Ltd",
+    text: "Highest commitment is shown on any work which is taken up,A good leader who can get the work done with parameters, assures the quality of work to a great extent, and handles people with courage. Convincing capabilities are strong.Takes information and knowledge from one and all, incorporating modifications to get better results.She can handle total real estate development starting from business development to project completion - excellent in designing, coordination, contracts, purchase, and execution. · Thorough in regulatory requirements.In a nutshell, she can spearhead any organization. Having started her own consulting firm, it is a pleasure working with her. Desired results are assured.",
     rating: 5,
   },
   {
-    name: "JOHN JAPUR",
-    text: "In Promotion And Advertising, A Testimonial Or Show Consists Of A Person's Written Or Spoken Statement Extolling The Virtue Of A Product.",
+    name: "Gururaj Thali",
+    position:"CMD Innotech Engineering Consult Pvt Ltd",
+    text: ". Ms Shobha is a very well organised engineer with vast talent and zeal to work effectively with all the stakeholders. · Capable leader who can handle Urban Planning / Master planning. · Ability to connect the design with costing is an added advantage. · The structural systems knowledge is good and effective, open to new ideas. · Coordination with all consultants is smooth and result oriented. . A very dynamic, proactive approach to managing the work environment and a successful one too in the male dominated industry. · Wishing her all the best.",
     rating: 5,
-  },
-  {
-    name: "JOHN JAPUR",
-    text: "In Promotion And Advertising, A Testimonial Or Show Consists Of A Person's Written Or Spoken Statement Extolling The Virtue Of A Product.",
-    rating: 5,
-  },
-  {
-    name: "JOHN JAPUR",
-    text: "In Promotion And Advertising, A Testimonial Or Show Consists Of A Person's Written Or Spoken Statement Extolling The Virtue Of A Product.",
-    rating: 5,
-  },
-  {
-    name: "JOHN JAPUR",
-    text: "In Promotion And Advertising, A Testimonial Or Show Consists Of A Person's Written Or Spoken Statement Extolling The Virtue Of A Product.",
-    rating: 5,
-  },
-  {
-    name: "JOHN JAPUR",
-    text: "In Promotion And Advertising, A Testimonial Or Show Consists Of A Person's Written Or Spoken Statement Extolling The Virtue Of A Product.",
-    rating: 5,
-  },
+  }
 ];
 
 const professionalExperience = [
@@ -383,7 +363,7 @@ export const Home = (): JSX.Element => {
                   A VISIONARY FORCE IN REAL ESTATE DEVELOPMENT
                 </p>
 
-                <h1 className="[font-family:'Boldonse',Helvetica] font-normal text-5xl md:text-7xl lg:text-8xl tracking-[0] leading-[1.1]">
+                <h1 className="[font-family:'Boldonse',Helvetica] font-normal text-4xl md:text-7xl lg:text-8xl tracking-[0] leading-[1.1]">
                   <span className="text-[#00032d]">SHOBHA N</span>
                   <span className="text-[#ee6f57]">.</span>
                   <span className="text-[#00032d]">V</span>
@@ -516,7 +496,7 @@ export const Home = (): JSX.Element => {
                 </div>
 
                 {/* Career & Competencies */}
-                <div className="flex-1 space-y-8 px-12">
+                <div className="flex-1 space-y-8 px-2 md:px-12">
                   
                 <p className="[font-family:'Raleway',Helvetica] font-normal text-[#00032d] text-sm md:text-[15px] tracking-[0] leading-[1.6]">
                   A visionary force in real estate development, Shobha N.V. blends technical rigor, entrepreneurial flair and decades-long expertise to shape impactful urban projects across India. From technical due diligence and feasibility studies to development management and procurement, Shobha delivers economical, sustainable design solutions.
@@ -576,7 +556,7 @@ export const Home = (): JSX.Element => {
                   className="bg-[#ffffffde] rounded-[5px] border-l-[9px] border-l-[#ee6f57] border-r-0 border-t-0 border-b-0 shadow-[0px_0px_4px_-1px_#00000061]"
                 >
                   <CardContent className="p-6 md:p-8 space-y-4">
-                    <p className="[font-family:'Raleway',Helvetica] font-normal text-[#00032d] text-lg md:text-xl lg:text-2xl tracking-[0] leading-[1.4]">
+                    <p className="[font-family:'Raleway',Helvetica] font-normal text-[#00032d] text-lg md:text-xl lg:text-xl tracking-[0] leading-[1.4] ">
                       {cert.title}
                     </p>
                     {cert.institution && (
@@ -654,7 +634,7 @@ export const Home = (): JSX.Element => {
                 return (
                   <div
                     key={card.id}
-                    className={`bg-white p-6 md:p-8 cursor-pointer min-h-[200px] md:min-h-[250px] flex flex-col items-center justify-center group ${
+                    className={`bg-[#fff] p-6 md:p-8 cursor-pointer min-h-[200px] md:min-h-[250px] flex flex-col items-center justify-center group ${
                       !isRightColumn ? 'md:border-r border-[#00032d]' : ''
                     } ${
                       !isBottomRow ? 'border-b border-[#00032d]' : ''
@@ -663,16 +643,19 @@ export const Home = (): JSX.Element => {
                       transition: 'background-color 0.3s ease'
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f97316'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#f97316'}
                   >
                     <div className="flex flex-col items-center text-center">
                       <div className="mb-6">
-                        <img src={card.icon} alt={card.title} className="w-12 h-12 md:w-16 md:h-16" />
+                        {card.icon != null && (
+                          <img src={card.icon} alt={card.title} className="w-12 h-12 md:w-16 md:h-16" />
+                        )}
                       </div>
                       {card.title && (
                         <h3 className="text-sm md:text-base font-normal text-gray-900 group-hover:text-white transition-colors duration-300 leading-relaxed">
                           {card.title}
                         </h3>
+                        
                       )}
                     </div>
                   </div>
@@ -718,7 +701,7 @@ export const Home = (): JSX.Element => {
         </section>
 
         {/* TESTIMONIALS SECTION - Responsive */}
-        <section className="relative w-full bg-[#00032dc2] py-12 md:py-16 lg:py-24">
+        <section className="relative w-full bg-[#00032d] py-12 md:py-16 lg:py-24">
           <h1 className="[font-family:'Boldonse',Helvetica] font-normal text-white text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-[normal] text-center mb-4">
             TESTIMONIALS
           </h1>
@@ -735,10 +718,10 @@ export const Home = (): JSX.Element => {
                   slidesPerView: 2,
                 },
                 1024: {
-                  slidesPerView: 3,
+                  slidesPerView: 2,
                 },
                 1280: {
-                  slidesPerView: 4,
+                  slidesPerView: 2,
                 },
               }}
               pagination={true}
@@ -747,12 +730,16 @@ export const Home = (): JSX.Element => {
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  <Card className="w-full max-w-[286px] h-[346px] bg-white rounded-[5px] mx-auto">
-                    <CardContent className="p-0 h-full flex flex-col items-center pt-8 px-6">
-                      <div className="w-20 h-20 bg-[#ee6f57] rounded-full mb-4" />
+                  <Card className="w-full max-w-[600px] min-h-[60vh] bg-white rounded-[5px] mx-auto">
+                    <CardContent className="p-0 h-full flex flex-col items-center justify-center pt-8 px-6">
+                      {/* <div className="w-20 h-20 bg-[#ee6f57] rounded-full mb-4" /> */}
                       <p className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-base text-center tracking-[0] leading-[normal] mb-2">
                         {testimonial.name}
                       </p>
+                      <p className="[font-family:'Raleway',Helvetica] font-normal text-[#00032d] text-[13px] text-center tracking-[0] leading-[normal] mb-2">
+                        {testimonial.position}
+                      </p>
+                      
                       <div className="flex gap-1 mb-6">
                         {Array.from({ length: testimonial.rating }).map((_, i) => (
                           <StarIcon
@@ -783,7 +770,7 @@ export const Home = (): JSX.Element => {
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
-              <div className="bg-white rounded-[5px] shadow-[0px_0px_4px_-1px_#00000061] p-6 md:p-8">
+              <div className=" p-6 md:p-8">
                 <h3 className="[font-family:'Boldonse',Helvetica] font-normal text-[#00032d] text-xl md:text-2xl mb-6">Direct Contacts</h3>
                 <div className="space-y-5">
                   <div>
