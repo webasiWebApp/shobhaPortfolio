@@ -623,7 +623,7 @@ export const Home = (): JSX.Element => {
             CORE STRENGTHS
           </h1>
           <p className="[font-family:'Raleway',Helvetica] font-normal text-white text-base md:text-lg lg:text-xl text-center tracking-[2.00px] md:tracking-[3.40px] leading-[normal] mb-12">
-            What Our Client Say About Us
+          professional and suitable for resumes or business profiles
           </p>
 
           <div className="container mx-auto px-6 md:px-10">
@@ -671,7 +671,7 @@ export const Home = (): JSX.Element => {
             SHOWCASE
           </h1>
           <p className="[font-family:'Raleway',Helvetica] font-normal text-black text-base md:text-lg lg:text-xl text-center tracking-[2.00px] md:tracking-[3.40px] leading-[normal] mb-12">
-            What Our Client Say About Us
+          Showcasing Our Expertise and Excellence
           </p>
           
           <div className="px-4 md:px-8 pb-8 md:pb-16">
